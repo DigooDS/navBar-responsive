@@ -1,5 +1,5 @@
 <h1 align="center">
-NavBar Responsivo
+NavBar Responsiva
 </h1>
 
 <h1>
