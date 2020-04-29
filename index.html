@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Nav - HTML and CSS</title>
+    <link rel="stylesheet" href="_css/styles.css">
+
+    <!--Carrerando fonte escolhida do "Google Fonts"-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    
+    <!--Configurações das fontes vindas do "fontsawesome"-->
+    <link rel="stylesheet" href="_css/all.min.css">
+       
+    <!--Carregar a library JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+    <!--Script JQuery para fazer o toggle na versão mobile-->
+    <script>
+
+        $(document).ready(function(){
+            // esconder o botão de fechar
+            $(".hamburger-button .fa-times").hide()
+
+            // função para fazer aparecer o botão de fechar assim que clicarmos no botão de hamburger
+            $(".hamburger-button .fa-bars").click(function(){
+                $(this).hide()
+                $(".hamburger-button .fa-times").show()
+                $(".mobile ul").addClass("active")
+            })
+
+            // função para fazer aparecer o botão hamburger assim que clicarmos no botão de fechar
+            $(".hamburger-button .fa-times").click(function(){
+                $(this).hide()
+                $(".hamburger-button .fa-bars").show()
+                $(".mobile ul").removeClass("active")
+            })
+        })
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="desktop">
+
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">maps</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+
+        </nav>
+
+
+        <nav class="mobile">
+            <div class="hamburger-button">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">maps</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+
+        </nav>
+
+
+        <div class="header">
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>

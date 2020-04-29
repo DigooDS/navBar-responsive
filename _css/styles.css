@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.container nav.desktop,
+.container nav.mobile {
+    width: 100%;
+    background: #061420;
+    height: 60px;
+    box-shadow: 0 3px 3px 0 rgba(5, 65, 37, 0.16);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+nav.desktop ul {
+    list-style: none;
+    width: 75%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+
+nav.desktop ul li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+nav ul li:hover {
+    background: #39434b;
+
+}
+
+
+nav ul li a {
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+nav.mobile,
+.hamburger-button {
+    display: none;
+}
+
+
+.header {
+    background: url('/_images/bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 830px;
+    margin-top: 60px;
+    position: relative;
+    z-index: -1;
+    
+}
+
+
+@media screen and (max-width: 700px){
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile,
+    .hamburger-button {
+        display: block;
+    }
+
+    .hamburger-button {
+        position: relative;
+    }
+
+    .hamburger-button .fa-bars,
+    .hamburger-button .fa-times {
+        position: fixed;
+        right: 25px;
+        top: 16px;
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .mobile ul {
+        margin-top: 60px;
+        background: #061420;
+        display: none;
+    }
+
+    .mobile ul.active {
+        display: block;
+    }
+
+    .mobile li {
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+    }
+}
